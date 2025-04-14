@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <!-- FontAwesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+  
+
+    <header>
+        <nav>
+          <div class="logo">
+            <a href="index.html">
+              <div class="logo-circle"></div>
+              <img src="images/ulrich.png" alt="Photo de la personne" />
+            </a>
+          </div>
+          <ul class="nav-links" id="navLinks">
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#outils">Outils</a></li>
+            <li><a href="#projets">Projets</a></li>
+            <li><a href="#docs">Docs</a></li>
+            <li><a href="#contact">Contact</a></li> <!-- Ajout de Contact -->
+          </ul>
+          <div class="burger" id="burger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+        </nav>
+      </header>
+    
+      <script>
+        // Toggle le menu burger
+        const burger = document.getElementById('burger');
+        const navLinks = document.getElementById('navLinks');
+    
+        burger.addEventListener('click', () => {
+          navLinks.classList.toggle('open');
+          burger.classList.toggle('toggle');
+        });
+    
+        // Effets dynamiques sur les liens
+        document.querySelectorAll('.nav-links a').forEach(link => {
+          link.addEventListener('mouseenter', () => {
+            link.classList.add('hover-animate');
+          });
+    
+          link.addEventListener('mouseleave', () => {
+            link.classList.remove('hover-animate');
+          });
+        });
+    
+        // Effet sur le logo
+        const logo = document.querySelector('.logo img');
+        logo.addEventListener('mouseenter', () => {
+          logo.classList.add('hover-animate');
+        });
+        logo.addEventListener('mouseleave', () => {
+          logo.classList.remove('hover-animate');
+        });
+      </script>
+
+ <!-- SECTION BANNIERE-->
+
+    <section id="banner" class="banner">
+        <div class="banner-overlay">
+            <h1><em>Ulrich Fosso</em>, Développeur full-stack [Front-end et Back-end] en herbe</h1>
+            <p>Je développe tout type d'applications web</p>
+            <a href="#projets" class="btn">Voir les Projets</a>
+        </div>
+    </section>
+
+      <!-- SECTION PRESENTATION -->
+
+    <section id="about" class="about animate" data-animate>
+        <div class="profile-card">
+        <div class="left-section">
+            <img src="images/profil.jpg" alt="Photo de la personne" class="profile-img">
+            <div class="contact-info">
+                <p class="lettre"><strong>Nom:</strong> Fosso Ulrich Dalkin</p>
+                <p class="lettre"><strong>Profil:</strong> Développeur Web</p>
+                <p class="lettre"><strong>Email:</strong> ulrichdalkin@gmail.com</p>
+                <p class="lettre"><strong>Téléphone:</strong> 0769521961</p>
+        <br>
+                <h2 class="compe"><strong>Compétences:</strong></h2>
+                <ul class="languages" data-animate> 
+                    <li>HTML</li>
+                    <li>CSS</li>
+                    <li>C#</li>
+                    <li>MySQL</li>
+                    <li>PHP</li>
+                    <li>JavaScript</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="right-section" data-animate>
+            <h2><strong>Sur moi</strong></h2>
+            <h3>Bonjour, je m'appelle <em class="em"> Fosso Ulrich Dalkin,</em></h3>
+            <p class="lettre"> Bienvenue sur mon portfolio ! actuellement en BTS SIO, je suis passionné par le monde dynamique de l'informatique. Mon parcours éducatif m'a permis de développer des compétences solides en <em>programmation, gestion de projets,</em> et bien plus encore.
+            Je souhaite poursuivre en licence orientée développement afin de devenir développeur full-stack. Passioné d'informatique depuis plus d'une dixaine d'années, ce n'est que très récemment que le développement web m'est apparu comme une passion.
+            <a href="https://drive.google.com/file/d/1ZvD2XtMV5_oYHUrVLoh4w9Wd9kYXUW3n/view?usp=sharing" class="cv-link">Voir mon CV</a>
+            </p>
+        </div>
+        </div>
+    </section>
+
+
+     <!-- SECTION SKILLS --> 
+      
+     <section id="skills" class="skills-section" data-animate>
+        <h2 class="section-title">|<em> SkillS</em> |</h2>
+
+        <div class="skills-container-wrapper">
+            <div class="skills-container">
+            <!-- Front-End -->
+            <div class="skills-column left" data-animate="from-left">
+                <h3 class="column-title">Front-End</h3>
+                <div class="skill-card"><img src="images/html.webp" alt="HTML" title="HTML"></div>
+                <div class="skill-card"><img src="images/css.webp" alt="CSS" title="CSS"></div>
+                <div class="skill-card"><img src="images/js.webp" alt="JavaScript" title="JavaScript"></div>
+                <div class="skill-card"><img src="images/React.webp" alt="React" title="React"></div>
+            </div>
+
+            <!-- Séparation centrale -->
+            <div class="middle-line"></div>
+
+            <!-- Back-End -->
+            <div class="skills-column right" data-animate="from-right">
+                <h3 class="column-title">Back-End</h3>
+                <div class="skill-card"><img src="images/php.webp" alt="PHP" title="PHP"></div>
+                <div class="skill-card"><img src="images/mysql.webp" alt="MySQL" title="MySQL"></div>
+                <div class="skill-card"><img src="images/nodejs.webp" alt="Node.js" title="Node.js"></div>
+                <div class="skill-card"><img src="images/Csharp.png" alt="C#" title="C#"></div>
+            </div>
+            </div>
+            <div class="scroll-line" id="scroll-line"></div>
+        </div>
+    </section>
+
+      <!-- SECTION OUTILS --> 
+
+    <section id="outils" class="outils-section" data-animate>
+        <h2 class="section-title">Les outils que j'utilise pour la plupart de mes projets</h2>
+
+        <div class="outils-container">
+            <div class="outils-category">
+                <h3 class="category-title">Outils de Codage</h3>
+                <ul class="outils-list" data-animate="from-left">
+                    <li class="outils-item">
+                        <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">Visual Studio Code</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                    <li class="outils-item">
+                        <a href="https://github.com/" target="_blank" rel="noopener noreferrer">Github</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                    <li class="outils-item">
+                        <a href="https://nodejs.org/" target="_blank" rel="noopener noreferrer">Node.js</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                </ul>
+            </div>
+
+            <div class="outils-category">
+                <h3 class="category-title">Bases de Données</h3>
+                <ul class="outils-list" data-animate="from-right">
+                    <li class="outils-item">
+                        <a href="https://www.mysql.com/" target="_blank" rel="noopener noreferrer">MySQL</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                    <li class="outils-item">
+                        <a href="https://visualstudio.microsoft.com/" target="_blank" rel="noopener noreferrer">Visual Studio</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                    <li class="outils-item">
+                        <a href="https://www.sqlite.org/" target="_blank" rel="noopener noreferrer">SQLite</a>
+                        <div class="hover-line"></div> <!-- Ligne de chargement -->
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="scroll-line" id="scroll-line"></div>
+</section>
+
+
+     <!-- SECTION PROJETS --> 
+
+     <section id="projets" class="section-projects" data-animate>
+    <div class="container">
+        <h2>| <em>Mes Projets</em> |</h2>
+        <div class="projets-grid">
+            <div class="projet">
+                <img src="images/portfolio.jpg" alt="Mon Portfolio">
+                <div class="overlay">
+                    <h3>Mon portfolio</h3>
+                    <p>"Ce portfolio présente mes projets en développement web, réalisés dans le cadre de mes études en BTS SIO. 
+                        Vous y trouverez des exemples de mes compétences en HTML, CSS, PHP, et JavaScript, illustrant 
+                        ma capacité à créer des sites web responsives."
+                    </p>
+                    <a href="index.php" class="button2">Voir le projet </a>
+                </div> <!-- Fermeture de div.overlay -->
+            </div> <!-- Fermeture de div.projet -->
+
+            <div class="projet">
+                <img src="images/Audi2.jpg" alt="Autolocpro">
+                <div class="overlay">
+                    <h3>Autolocpro</h3>
+                    <p>"Autolocpro est un site web de location de voitures de luxe que j'ai développé dans le cadre de mes études. 
+                        Ce projet met en avant mes compétences en tant que développeur pour créer une plateforme
+                        dynamique et intuitive."
+                    </p>
+                    <a href="#" class="button2">Voir le projet</a>
+                </div> <!-- Fermeture de div.overlay -->
+            </div> <!-- Fermeture de div.projet -->
+
+            <div class="projet">
+                <img src="images/confucius.jpg" alt="Pronet">
+                <div class="overlay">
+                    <h3>Confucius Culture</h3>
+                    <p>"Confucius Culture est un site évènementiel en développement, 
+                        dédié à la culture afro-caribéenne. J’y intègre des fonctionnalités 
+                        modernes et responsives pour offrir une expérience dynamique et immersive."
+                    </p>
+                    <a href="#" class="button2">Voir le projet</a>
+                </div> <!-- Fermeture de div.overlay -->
+            </div> <!-- Fermeture de div.projet -->
+        </div> <!-- Fermeture de div.projets-grid -->
+    </div> <!-- Fermeture de div.container -->
+</section> <!-- Fermeture de section.projets -->
+
+<br><br>
+     <!-- SECTION VEILLE TECHNOLOGIQUE --> 
+
+<section id="docs" class="veille-section" data-animate>
+    <div class="container">
+        <h2>| <em>Les documentations que j'ai réalisées</em> |</h2>
+        <div class="veille-container">
+            <div class="veille-item">
+                <img src="images/cerveau.jpg" alt="Technologie 1">
+                <div class="veille-overlay">
+                    <h3>Intelligence Artificielle</h3>
+                    <p>Cette technologie révolutionne l'innovation en offrant des solutions puissantes et accessibles.</p>
+                    <a href="https://urlr.me/gwBbMC" class="button2">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="veille-item">
+                <img src="images/pirate.png" alt="Technologie 2">
+                <div class="veille-overlay">
+                    <h3>Vulnérabilités du Web</h3>
+                    <p>Les vulnérabilités du web influencent la sécurité et l'interaction avec les utilisateurs en ligne.</p>
+                    <a href="https://urlr.me/gwBbMC" class="button2">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="veille-item">
+                <img src="images/cryptographie.png" alt="Technologie 3">
+                <div class="veille-overlay">
+                    <h3>La cryptographie</h3>
+                    <p>La cryptographie joue un rôle clé dans la sécurisation des informations sensibles et des échanges numériques.</p>
+                    <a href="https://urlr.me/gwBbMC" class="button2">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="veille-item">
+                <img src="images/tech3.jpg" alt="Technologie 3">
+                <div class="veille-overlay">
+                    <h3>Certification</h3>
+                    <p>La certification est essentielle pour garantir la qualité et la fiabilité des produits et services.</p>
+                    <a href="https://urlr.me/gwBbMC" class="button2">En savoir plus</a>
+                </div>
+            </div>
+
+            <div class="veille-item">
+                <img src="images/tech3.jpg" alt="Technologie 3">
+                <div class="veille-overlay">
+                    <h3>Technologie 3</h3>
+                    <p>Cette innovation pourrait transformer l'industrie, rendant les processus beaucoup plus efficaces.</p>
+                    <a href="https://exemple.com" class="button2">En savoir plus</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<br>
+     <!-- SECTION CONTACT --> 
+
+     <section id="contact" class="contact" data-animate>
+        <h2>Vous souhaitez me contacter ? C'est ici que ça se passe !</h2>
+        <form action="contact.php" method="POST">
+            <input type="text" name="name" placeholder="Nom..." required>
+            <input type="email" name="email" placeholder="Email..." required>
+            <textarea name="message" placeholder="Votre Message..." required></textarea>
+            <button type="submit" class="btn">Envoyer</button>
+        </form>
+     </section>
+
+<br>
+
+     <!-- SECTION FOOTER --> 
+
+     <footer>
+        <div class="social-icons" data-animate>
+            <a href="https://www.linkedin.com/in/ulrich-dalkin-fosso-52b505263/" class="social-icon linkedin" target="_blank">
+                <i class="fab fa-linkedin"></i> <!-- Icône LinkedIn FontAwesome -->
+            </a>
+            <a href="https://github.com/" class="social-icon github" target="_blank">
+                <i class="fab fa-github"></i> <!-- Icône GitHub FontAwesome -->
+            </a>
+            <a href="https://www.instagram.com/" class="social-icon instagram" target="_blank">
+                <i class="fab fa-instagram"></i> <!-- Icône Instagram FontAwesome -->
+            </a>
+            <a href="https://twitter.com/" class="social-icon twitter" target="_blank">
+                <i class="fab fa-twitter"></i> <!-- Icône Twitter FontAwesome -->
+            </a>
+        </div>
+        <p>&copy; 2025 MonPortfolio Ulrich. Tous Droits Réservés.</p>
+    </footer>
+
+
+
+
+
+</body>
+</html>
+
