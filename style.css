@@ -344,6 +344,128 @@ nav {
     opacity: 0.2;
 }
 
+/* Système neuronal */
+.neural-network {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.neural-network canvas {
+    width: 100%;
+    height: 100%;
+}
+
+/* Portail quantique */
+.quantum-portal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 300px;
+    z-index: -1;
+}
+
+.portal-ring {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    border: 2px solid var(--primary);
+    transform: translate(-50%, -50%);
+    animation: rotate 20s linear infinite;
+}
+
+.ring-1 {
+    width: 100%;
+    height: 100%;
+    animation-delay: 0s;
+}
+
+.ring-2 {
+    width: 70%;
+    height: 70%;
+    border-color: var(--secondary);
+    animation-delay: -5s;
+    animation-direction: reverse;
+}
+
+.ring-3 {
+    width: 40%;
+    height: 40%;
+    border-color: var(--accent);
+    animation-delay: -10s;
+}
+
+.portal-core {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    background: var(--primary);
+    border-radius: 50%;
+    box-shadow: var(--glow);
+}
+
+.core-pulse {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    height: 100%;
+    background: var(--primary);
+    border-radius: 50%;
+    animation: pulse 2s ease-out infinite;
+}
+
+/* Icônes quantiques */
+.quantum-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.icon-float {
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: var(--y);
+    left: var(--x);
+    animation: float 6s ease-in-out infinite;
+    animation-delay: var(--delay);
+}
+
+.quantum-spin {
+    font-size: 2rem;
+    color: var(--primary);
+    position: relative;
+    z-index: 1;
+    animation: rotate 10s linear infinite;
+}
+
+.icon-aura {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, var(--primary) 0%, transparent 70%);
+    opacity: 0.3;
+    animation: pulse 3s ease-in-out infinite;
+}
+
 .banner-content {
     display: flex;
     flex-wrap: wrap;
@@ -394,6 +516,28 @@ nav {
     animation: glitch 2s infinite linear alternate-reverse;
 }
 
+.glitch-lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+.glitch-line {
+    position: absolute;
+    width: 100%;
+    height: 1px;
+    background: var(--primary);
+    opacity: 0.1;
+    animation: glitch-line 0.5s infinite;
+}
+
+.glitch-line:nth-child(1) { top: 20%; }
+.glitch-line:nth-child(2) { top: 50%; }
+.glitch-line:nth-child(3) { top: 80%; }
+
 .dynamic-typography {
     margin-bottom: 30px;
 }
@@ -410,6 +554,11 @@ nav {
     color: var(--primary);
     border-right: 3px solid var(--primary);
     padding-right: 5px;
+    animation: blink 1s infinite;
+}
+
+.cursor {
+    color: var(--primary);
     animation: blink 1s infinite;
 }
 
@@ -611,6 +760,19 @@ nav {
     animation-delay: -14s;
 }
 
+.connection-web {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.connection-web canvas {
+    width: 100%;
+    height: 100%;
+}
+
 .live-stats {
     display: flex;
     justify-content: center;
@@ -657,6 +819,27 @@ nav {
     background: linear-gradient(to bottom, transparent, var(--accent), transparent);
     animation: scan-vertical 3s ease-in-out infinite;
 }
+
+.scanner-dots {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.scanner-dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--primary);
+    animation: pulse 2s ease-in-out infinite;
+}
+
+.scanner-dot:nth-child(2) { animation-delay: 0.5s; }
+.scanner-dot:nth-child(3) { animation-delay: 1s; }
 
 .advanced-scroll-indicator {
     position: absolute;
@@ -743,6 +926,13 @@ nav {
 
 .lettre {
     margin-bottom: 10px;
+    line-height: 1.6;
+}
+
+.compe {
+    color: var(--primary);
+    margin: 20px 0 15px;
+    font-size: 1.5rem;
 }
 
 .languages {
@@ -765,6 +955,26 @@ nav {
 .languages li:hover {
     background: rgba(0, 212, 255, 0.2);
     transform: translateY(-3px);
+}
+
+.right-section h2 {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.right-section h2:after {
+    left: 0;
+    transform: none;
+}
+
+.right-section h3 {
+    margin-bottom: 20px;
+    color: var(--light);
+}
+
+.right-section h3 .em {
+    color: var(--primary);
+    font-style: normal;
 }
 
 .cta-buttons {
@@ -809,6 +1019,13 @@ nav {
 
 .skills-section {
     background-color: var(--dark);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: var(--light);
 }
 
 .skills-scroll-container {
@@ -1074,11 +1291,17 @@ nav {
 }
 
 /* ==========================================================================
-   SECTION PROJETS
+   SECTION PROJETS - CORRIGÉE POUR RESPONSIVE
    ========================================================================== */
 
 .section-projects {
     background-color: var(--darker);
+    padding: 80px 20px;
+}
+
+.section-projects h2 {
+    text-align: center;
+    margin-bottom: 50px;
 }
 
 .projets-grid {
@@ -1111,6 +1334,7 @@ nav {
 
 .projet:hover img {
     transform: scale(1.1);
+    filter: blur(2px);
 }
 
 .overlay {
@@ -1119,13 +1343,28 @@ nav {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(5, 5, 8, 0.9);
+    background: rgba(5, 5, 8, 0.95);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 30px;
+    padding: 25px;
     opacity: 0;
     transition: var(--transition-medium);
+    overflow-y: auto;
+    z-index: 2;
+}
+
+/* Permettre le scroll sur l'overlay */
+.overlay::-webkit-scrollbar {
+    width: 5px;
+}
+
+.overlay::-webkit-scrollbar-track {
+    background: rgba(0, 212, 255, 0.1);
+}
+
+.overlay::-webkit-scrollbar-thumb {
+    background: var(--primary);
+    border-radius: 10px;
 }
 
 .projet:hover .overlay {
@@ -1135,19 +1374,42 @@ nav {
 .overlay h3 {
     color: var(--primary);
     margin-bottom: 15px;
+    font-size: 1.4rem;
+    line-height: 1.3;
+}
+
+.overlay p {
+    color: var(--light);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    flex-grow: 1;
+    overflow-wrap: break-word;
+}
+
+.overlay strong {
+    color: var(--accent);
+    font-weight: 600;
 }
 
 .button2 {
-    display: inline-block;
-    padding: 10px 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 24px;
     background: linear-gradient(45deg, var(--primary-dark), var(--primary));
     color: var(--dark);
     text-decoration: none;
     border-radius: var(--border-radius);
     font-weight: 600;
-    margin-top: 20px;
-    align-self: flex-start;
+    font-size: 0.95rem;
     transition: var(--transition-fast);
+    border: none;
+    cursor: pointer;
+    width: auto;
+    min-width: 140px;
+    align-self: flex-start;
+    margin-top: auto;
 }
 
 .button2:hover {
@@ -1161,6 +1423,7 @@ nav {
 
 .advanced-skills-section {
     background-color: var(--dark);
+    padding: 80px 20px;
 }
 
 .section-header {
@@ -1205,6 +1468,15 @@ nav {
     height: 300px;
     margin: 0 auto 60px;
     position: relative;
+}
+
+#radarCanvas {
+    width: 100%;
+    height: 100%;
+}
+
+.radar-points {
+    display: none;
 }
 
 .skills-gallery {
@@ -1502,6 +1774,7 @@ nav {
 .contact {
     background-color: var(--darker);
     text-align: center;
+    padding: 80px 20px;
 }
 
 .contact-subtitle {
@@ -1680,6 +1953,11 @@ footer > p {
     100% { clip: rect(24px, 550px, 90px, 0); }
 }
 
+@keyframes glitch-line {
+    0%, 100% { transform: translateX(0); opacity: 0.1; }
+    50% { transform: translateX(10px); opacity: 0.3; }
+}
+
 @keyframes blink {
     0%, 100% { opacity: 1; }
     50% { opacity: 0; }
@@ -1720,6 +1998,16 @@ footer > p {
     100% { width: attr(data-level); }
 }
 
+@keyframes pulse {
+    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
+    50% { transform: translate(-50%, -50%) scale(1.5); opacity: 0.8; }
+}
+
+@keyframes wave-animation {
+    0% { transform: translateX(-100%); }
+    100% { transform: translateX(100%); }
+}
+
 /* ==========================================================================
    RESPONSIVE DESIGN
    ========================================================================== */
@@ -1728,6 +2016,10 @@ footer > p {
     h1 { font-size: 3rem; }
     h2 { font-size: 2.2rem; }
     .glitch-text { font-size: 3rem; }
+    .projets-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+        gap: 25px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -1768,6 +2060,7 @@ footer > p {
     
     .glitch-text { font-size: 2.5rem; }
     h1 { font-size: 2.5rem; }
+    .typing-container { font-size: 1.5rem; }
     
     /* Sections */
     .profile-card {
@@ -1786,6 +2079,56 @@ footer > p {
         min-width: 180px;
     }
     
+    /* Projets - Corrections pour mobile */
+    .projet {
+        height: 350px;
+    }
+    
+    .overlay {
+        opacity: 1;
+        background: linear-gradient(
+            to bottom,
+            transparent 0%,
+            rgba(5, 5, 8, 0.7) 30%,
+            rgba(5, 5, 8, 0.95) 70%,
+            rgba(5, 5, 8, 1) 100%
+        );
+        padding: 20px;
+        justify-content: flex-end;
+    }
+    
+    .overlay h3 {
+        font-size: 1.3rem;
+        margin-bottom: 10px;
+    }
+    
+    .overlay p {
+        font-size: 0.88rem;
+        margin-bottom: 15px;
+        display: -webkit-box;
+        -webkit-line-clamp: 4;
+        -webkit-box-orient: vertical;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .projet:hover img {
+        transform: none;
+        filter: none;
+    }
+    
+    .projet:hover {
+        transform: none;
+    }
+    
+    .button2 {
+        width: 100%;
+        justify-content: center;
+        padding: 12px;
+        font-size: 0.9rem;
+    }
+    
+    /* Timeline */
     .timeline-track:before {
         left: 20px;
     }
@@ -1815,7 +2158,7 @@ footer > p {
     h1 { font-size: 2rem; }
     h2 { font-size: 1.8rem; }
     .glitch-text { font-size: 2rem; }
-    .typing-container { font-size: 1.5rem; }
+    .typing-container { font-size: 1.3rem; }
     
     .action-buttons {
         flex-direction: column;
@@ -1837,5 +2180,79 @@ footer > p {
     
     .projets-grid {
         grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .projet {
+        height: 320px;
+    }
+    
+    .overlay {
+        padding: 15px;
+    }
+    
+    .overlay h3 {
+        font-size: 1.2rem;
+        margin-bottom: 8px;
+    }
+    
+    .overlay p {
+        font-size: 0.85rem;
+        -webkit-line-clamp: 3;
+        margin-bottom: 12px;
+    }
+    
+    .button2 {
+        padding: 10px;
+        font-size: 0.85rem;
+        min-width: 120px;
+    }
+}
+
+@media (max-width: 360px) {
+    .projet {
+        height: 300px;
+    }
+    
+    .overlay h3 {
+        font-size: 1.1rem;
+    }
+    
+    .overlay p {
+        font-size: 0.8rem;
+        -webkit-line-clamp: 2;
+    }
+    
+    .button2 {
+        font-size: 0.8rem;
+        padding: 8px 12px;
+    }
+}
+
+/* Amélioration de l'affichage sur ordinateur */
+@media (min-width: 769px) {
+    .overlay {
+        justify-content: center;
+        text-align: center;
+    }
+    
+    .overlay p {
+        max-height: 150px;
+        overflow-y: auto;
+        padding-right: 5px;
+    }
+    
+    .overlay p::-webkit-scrollbar {
+        width: 4px;
+    }
+    
+    .overlay p::-webkit-scrollbar-thumb {
+        background: var(--primary);
+        border-radius: 2px;
+    }
+    
+    .button2 {
+        align-self: center;
+        margin-top: 20px;
     }
 }
