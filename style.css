@@ -630,7 +630,7 @@ nav {
 .cyber-button {
     background: linear-gradient(45deg, var(--primary-dark), var(--primary));
     color: var(--dark);
-    box-shadow: var(--glow);
+   
 }
 
 .hologram-button {
@@ -642,6 +642,7 @@ nav {
 .cyber-button:hover, .hologram-button:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+    box-shadow: var(--glow);
 }
 
 .button-content {
