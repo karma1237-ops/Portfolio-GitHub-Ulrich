@@ -1,1 +1,964 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio de Ulrich Fosso - Développeur Full-Stack spécialisé en React, C# et développement mobile">
+    <meta name="keywords" content="développeur web, React, C#, portfolio, full-stack, développement mobile">
+    <meta name="author" content="Ulrich Fosso">
+    <title>Ulrich Fosso - Développeur Full-Stack | Portfolio 2025</title>
+    
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=JetBrains+Mono:wght@300;400;600;800&family=Crimson+Pro:wght@400;600;900&display=swap" rel="stylesheet">
+    
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    
+    <!-- ==================== NAVIGATION ==================== -->
+    <nav class="main-nav" id="mainNav">
+        <div class="nav-container">
+            <a href="#home" class="logo-link">
+                <div class="logo">
+                    <span class="logo-bracket">[</span>
+                    <span class="logo-text">UF</span>
+                    <span class="logo-bracket">]</span>
+                </div>
+            </a>
+            
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#expertise" class="nav-link">Expertise</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#experience" class="nav-link">Parcours</a></li>
+                <li><a href="#stack" class="nav-link">Stack</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Changer de thème">
+                    <i class="fas fa-moon" id="themeIcon"></i>
+                </button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Toggle menu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
 
+    <!-- ==================== HERO SECTION ==================== -->
+    <section id="home" class="hero-section">
+        <div class="hero-background">
+            <div class="grid-overlay"></div>
+            <canvas id="particleCanvas"></canvas>
+        </div>
+        
+        <div class="hero-content">
+            <div class="hero-text">
+                <div class="status-badge">
+                    <span class="status-dot"></span>
+                    Disponible pour alternance • Master 2025
+                </div>
+                
+                <h1 class="hero-title">
+                    <span class="title-line">Ulrich Fosso</span>
+                    <span class="title-line title-gradient">Développeur Full-Stack</span>
+                </h1>
+                
+                <div class="hero-subtitle">
+                    <p class="typing-text">Architecte d'expériences numériques modernes</p>
+                </div>
+                
+                <p class="hero-description">
+                    Spécialisé dans la création d'applications web et mobiles performantes 
+                    avec <strong>React.js</strong>, <strong>React Native</strong> et <strong>C# .NET</strong>. 
+                    Passionné par l'innovation et les architectures élégantes.
+                </p>
+                
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>Voir mes projets</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Me contacter</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </a>
+                </div>
+                
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="15">0</span>
+                        <span class="stat-label">Projets réalisés</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="8">0</span>
+                        <span class="stat-label">Technologies maîtrisées</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" data-target="3">0</span>
+                        <span class="stat-label">Années d'expérience</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="hero-visual">
+                <div class="code-window">
+                    <div class="window-header">
+                        <span class="window-dot red"></span>
+                        <span class="window-dot yellow"></span>
+                        <span class="window-dot green"></span>
+                    </div>
+                    <div class="window-content">
+                        <pre><code class="code-snippet">
+<span class="code-comment">// Développeur Full-Stack</span>
+<span class="code-keyword">const</span> <span class="code-variable">developer</span> = {
+  <span class="code-property">name</span>: <span class="code-string">"Ulrich Fosso"</span>,
+  <span class="code-property">role</span>: <span class="code-string">"Concepteur Développeur"</span>,
+  <span class="code-property">skills</span>: [
+    <span class="code-string">"React.js"</span>,
+    <span class="code-string">"React Native"</span>,
+    <span class="code-string">"C# .NET"</span>,
+    <span class="code-string">"Node.js"</span>
+  ],
+  <span class="code-property">passion</span>: <span class="code-string">"Innovation & Clean Code"</span>
+};
+                        </code></pre>
+                    </div>
+                </div>
+                
+                <div class="floating-elements">
+                    <div class="float-icon" style="--delay: 0s; --x: 20%; --y: 10%;">
+                        <i class="fab fa-react"></i>
+                    </div>
+                    <div class="float-icon" style="--delay: 0.5s; --x: 80%; --y: 30%;">
+                        <i class="fab fa-node-js"></i>
+                    </div>
+                    <div class="float-icon" style="--delay: 1s; --x: 60%; --y: 70%;">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <div class="float-icon" style="--delay: 1.5s; --x: 30%; --y: 85%;">
+                        <i class="fas fa-database"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="scroll-indicator">
+            <span class="scroll-text">Défiler</span>
+            <div class="scroll-icon"></div>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 01. Présentation</span>
+                <h2 class="section-title">À propos de moi</h2>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="text-block">
+                        <h3>Bonjour, je suis Ulrich</h3>
+                        <p>
+                            Développeur Full-Stack passionné actuellement en formation <strong>BAC+3 Concepteur Développeur d'Applications</strong>, 
+                            je transforme des idées complexes en applications élégantes et performantes.
+                        </p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>Mon parcours</h3>
+                        <p>
+                            Après l'obtention de mon <strong>BTS SIO option SLAM</strong> en 2024, j'ai approfondi mes compétences 
+                            en architecture logicielle, développement mobile et méthodes agiles. Mon expertise couvre l'ensemble 
+                            du cycle de développement, du design de l'interface utilisateur à l'optimisation des performances backend.
+                        </p>
+                    </div>
+                    
+                    <div class="text-block">
+                        <h3>Ma philosophie</h3>
+                        <p>
+                            Je crois fermement en l'importance du <strong>Clean Code</strong>, de l'accessibilité et de l'expérience utilisateur. 
+                            Chaque ligne de code que j'écris vise la simplicité, la maintenabilité et l'excellence technique.
+                        </p>
+                    </div>
+                    
+                    <div class="profile-highlights">
+                        <div class="highlight-item">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <strong>Formation</strong>
+                                <span>BAC+3 Concepteur Développeur d'Applications</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <strong>Diplôme</strong>
+                                <span>BTS SIO SLAM (2024)</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Localisation</strong>
+                                <span>Île-de-France, France</span>
+                            </div>
+                        </div>
+                        <div class="highlight-item">
+                            <i class="fas fa-briefcase"></i>
+                            <div>
+                                <strong>Statut</strong>
+                                <span>Recherche alternance Master 2025</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="about-actions">
+                        <a href="https://drive.google.com/file/d/1DRxJZqwZ4IoE9C8GyPlS78PH_kG_NpjO/view?usp=sharing" 
+                           class="btn btn-primary" target="_blank">
+                            <i class="fas fa-download"></i>
+                            <span>Télécharger mon CV</span>
+                        </a>
+                        <a href="https://www.linkedin.com/in/ulrich-dalkin-fosso-52b505263/" 
+                           class="btn btn-outline" target="_blank">
+                            <i class="fab fa-linkedin"></i>
+                            <span>LinkedIn</span>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="about-visual">
+                    <div class="profile-card">
+                        <div class="card-decoration"></div>
+                        <img src="images/profil.jpg" alt="Ulrich Fosso" class="profile-image">
+                        <div class="profile-info">
+                            <h4>Ulrich Dalkin Fosso</h4>
+                            <p>Concepteur Développeur d'Applications</p>
+                            <div class="contact-links">
+                                <a href="/cdn-cgi/l/email-protection#542138263d373c3035383f3d3a143339353d387a373b39">
+                                    <i class="fas fa-envelope"></i>
+                                    <span class="__cf_email__" data-cfemail="d4a1b8a6bdb7bcb0b5b8bfbdba94b3b9b5bdb8fab7bbb9">[email&#160;protected]</span>
+                                </a>
+                                <a href="tel:0769521961">
+                                    <i class="fas fa-phone"></i>
+                                    07 69 52 19 61
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="skills-quick">
+                        <h4>Compétences clés</h4>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">C# .NET</span>
+                            <span class="skill-tag">Node.js</span>
+                            <span class="skill-tag">MySQL</span>
+                            <span class="skill-tag">API REST</span>
+                            <span class="skill-tag">Scrum</span>
+                            <span class="skill-tag">Git</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERTISE SECTION ==================== -->
+    <section id="expertise" class="expertise-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 02. Domaines d'expertise</span>
+                <h2 class="section-title">Ce que je fais</h2>
+            </div>
+            
+            <div class="expertise-grid">
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-code"></i>
+                    </div>
+                    <h3>Développement Frontend</h3>
+                    <p>
+                        Création d'interfaces utilisateur modernes et réactives avec React.js. 
+                        Maîtrise des hooks, Context API, et optimisation des performances.
+                    </p>
+                    <ul class="tech-list">
+                        <li>React.js & Next.js</li>
+                        <li>JavaScript ES6+</li>
+                        <li>HTML5 / CSS3 / SASS</li>
+                        <li>Responsive Design</li>
+                        <li>Animations CSS & Framer Motion</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <h3>Développement Backend</h3>
+                    <p>
+                        Conception d'APIs REST robustes et sécurisées avec C# .NET et Node.js. 
+                        Architecture en couches et principes SOLID.
+                    </p>
+                    <ul class="tech-list">
+                        <li>C# .NET 8 & ASP.NET Core</li>
+                        <li>Entity Framework</li>
+                        <li>Node.js & Express</li>
+                        <li>API REST & GraphQL</li>
+                        <li>Authentification JWT</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Développement Mobile</h3>
+                    <p>
+                        Applications mobiles cross-platform avec React Native et Expo. 
+                        Navigation, gestion d'état et optimisation mobile.
+                    </p>
+                    <ul class="tech-list">
+                        <li>React Native & Expo</li>
+                        <li>Navigation (React Navigation)</li>
+                        <li>Gestion d'état (Redux/Context)</li>
+                        <li>APIs natives & Push Notifications</li>
+                        <li>Performances & Optimisation</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-database"></i>
+                    </div>
+                    <h3>Bases de Données</h3>
+                    <p>
+                        Conception et gestion de bases de données relationnelles et NoSQL. 
+                        Optimisation des requêtes et modélisation des données.
+                    </p>
+                    <ul class="tech-list">
+                        <li>MySQL & SQL Server</li>
+                        <li>MongoDB & Firebase</li>
+                        <li>Modélisation UML</li>
+                        <li>Migrations & Seed Data</li>
+                        <li>Optimisation & Indexation</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <h3>Méthodes Agiles</h3>
+                    <p>
+                        Expérience pratique avec Scrum : sprints, daily meetings, 
+                        rétrospectives et gestion de backlog.
+                    </p>
+                    <ul class="tech-list">
+                        <li>Scrum & Kanban</li>
+                        <li>User Stories & Backlog</li>
+                        <li>Sprint Planning</li>
+                        <li>Jira & Trello</li>
+                        <li>Code Reviews</li>
+                    </ul>
+                </div>
+                
+                <div class="expertise-card">
+                    <div class="card-icon">
+                        <i class="fas fa-code-branch"></i>
+                    </div>
+                    <h3>DevOps & Versionning</h3>
+                    <p>
+                        Gestion de version avec Git, workflows collaboratifs, 
+                        CI/CD et déploiement continu.
+                    </p>
+                    <ul class="tech-list">
+                        <li>Git & GitHub/GitLab</li>
+                        <li>Git Flow & Branching</li>
+                        <li>CI/CD Pipelines</li>
+                        <li>Docker (bases)</li>
+                        <li>Déploiement Cloud</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PROJECTS SECTION ==================== -->
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 03. Réalisations</span>
+                <h2 class="section-title">Mes projets</h2>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Project 1 -->
+                <article class="project-card featured">
+                    <div class="project-image">
+                        <img src="images/mobile-app.jpg" alt="Application E-commerce Mobile">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag featured-tag">Projet principal</span>
+                            <h3>Application E-commerce Mobile</h3>
+                        </div>
+                        <p class="project-description">
+                            Application mobile complète développée avec React Native permettant la navigation 
+                            de produits, gestion du panier, paiement sécurisé et suivi de commandes. 
+                            Synchronisation en temps réel avec Firebase et notifications push.
+                        </p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Authentification Firebase</span>
+                            <span><i class="fas fa-check"></i> Paiement Stripe</span>
+                            <span><i class="fas fa-check"></i> Push Notifications</span>
+                            <span><i class="fas fa-check"></i> Gestion d'état Redux</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">React Native</span>
+                            <span class="tech-badge">Expo</span>
+                            <span class="tech-badge">Firebase</span>
+                            <span class="tech-badge">Redux</span>
+                            <span class="tech-badge">Stripe</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-play"></i> Démo
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 2 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/csharp-api.jpg" alt="API REST C# .NET">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag">Backend</span>
+                            <h3>API REST Gestion d'Inventaire</h3>
+                        </div>
+                        <p class="project-description">
+                            API REST complète avec C# .NET 8 pour la gestion d'inventaire. 
+                            Architecture en couches, authentification JWT, documentation Swagger 
+                            et tests unitaires avec xUnit.
+                        </p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Architecture Clean</span>
+                            <span><i class="fas fa-check"></i> JWT Authentication</span>
+                            <span><i class="fas fa-check"></i> Tests unitaires</span>
+                            <span><i class="fas fa-check"></i> Documentation Swagger</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">C# .NET 8</span>
+                            <span class="tech-badge">Entity Framework</span>
+                            <span class="tech-badge">SQL Server</span>
+                            <span class="tech-badge">Swagger</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 3 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/react-dashboard.jpg" alt="Dashboard React Admin">
+                        <div class="project-overlay">
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag">Frontend</span>
+                            <h3>Dashboard Admin React</h3>
+                        </div>
+                        <p class="project-description">
+                            Tableau de bord administrateur moderne avec React.js. Visualisation de données 
+                            avec Recharts, filtres dynamiques, export CSV, mode sombre et gestion des utilisateurs.
+                        </p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Graphiques interactifs</span>
+                            <span><i class="fas fa-check"></i> Mode sombre</span>
+                            <span><i class="fas fa-check"></i> Export données</span>
+                            <span><i class="fas fa-check"></i> Responsive Design</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">React.js</span>
+                            <span class="tech-badge">Material-UI</span>
+                            <span class="tech-badge">Recharts</span>
+                            <span class="tech-badge">Axios</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn-link">
+                                <i class="fab fa-github"></i> Code source
+                            </a>
+                            <a href="#" class="btn-link">
+                                <i class="fas fa-play"></i> Démo live
+                            </a>
+                        </div>
+                    </div>
+                </article>
+                
+                <!-- Project 4 -->
+                <article class="project-card">
+                    <div class="project-image">
+                        <img src="images/portfolio.jpg" alt="Portfolio Personnel">
+                        <div class="project-overlay">
+                            <a href="index.html" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-header">
+                            <span class="project-tag">Web Design</span>
+                            <h3>Portfolio Professionnel</h3>
+                        </div>
+                        <p class="project-description">
+                            Portfolio moderne et interactif présentant mes projets et compétences. 
+                            Design responsive avec animations CSS avancées et optimisation SEO.
+                        </p>
+                        <div class="project-features">
+                            <span><i class="fas fa-check"></i> Design moderne</span>
+                            <span><i class="fas fa-check"></i> Animations fluides</span>
+                            <span><i class="fas fa-check"></i> SEO optimisé</span>
+                            <span><i class="fas fa-check"></i> Performance A+</span>
+                        </div>
+                        <div class="project-tech">
+                            <span class="tech-badge">HTML5</span>
+                            <span class="tech-badge">CSS3</span>
+                            <span class="tech-badge">JavaScript</span>
+                            <span class="tech-badge">Canvas API</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="index.html" class="btn-link">
+                                <i class="fas fa-eye"></i> Vous y êtes !
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== EXPERIENCE SECTION ==================== -->
+    <section id="experience" class="experience-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 04. Parcours professionnel</span>
+                <h2 class="section-title">Mon expérience</h2>
+            </div>
+            
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2024 - Présent</span>
+                        <h3>BAC+3 Concepteur Développeur d'Applications</h3>
+                        <p class="timeline-company">Formation en alternance</p>
+                        <p>
+                            Formation approfondie en architecture logicielle, développement full-stack 
+                            et méthodes agiles. Projets réels avec React Native, C# .NET et Node.js.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>Architecture logicielle</span>
+                            <span>React Native</span>
+                            <span>C# .NET</span>
+                            <span>Méthodes Agiles</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">2022 - 2024</span>
+                        <h3>BTS SIO option SLAM</h3>
+                        <p class="timeline-company">Obtenu avec succès</p>
+                        <p>
+                            Formation aux fondamentaux du développement : programmation orientée objet, 
+                            bases de données, développement web et mobile. Projets en PHP, JavaScript et MySQL.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>POO</span>
+                            <span>PHP</span>
+                            <span>MySQL</span>
+                            <span>JavaScript</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">Stage • 2023</span>
+                        <h3>Développeur Web Junior</h3>
+                        <p class="timeline-company">Stage de formation</p>
+                        <p>
+                            Développement de fonctionnalités web, maintenance de sites existants, 
+                            participation aux réunions d'équipe et apprentissage des méthodologies agiles.
+                        </p>
+                        <div class="timeline-skills">
+                            <span>HTML/CSS</span>
+                            <span>JavaScript</span>
+                            <span>Git</span>
+                            <span>Scrum</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== TECH STACK SECTION ==================== -->
+    <section id="stack" class="stack-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 05. Technologies</span>
+                <h2 class="section-title">Ma stack technique</h2>
+            </div>
+            
+            <div class="stack-categories">
+                <!-- Frontend -->
+                <div class="stack-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-palette"></i>
+                        Frontend
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-js"></i>
+                            <span>JavaScript</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-html5"></i>
+                            <span>HTML5</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-css3-alt"></i>
+                            <span>CSS3</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 92%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Backend -->
+                <div class="stack-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-server"></i>
+                        Backend
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-microsoft"></i>
+                            <span>C# .NET</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-node-js"></i>
+                            <span>Node.js</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-php"></i>
+                            <span>PHP</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-database"></i>
+                            <span>MySQL</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 87%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Mobile -->
+                <div class="stack-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-mobile-alt"></i>
+                        Mobile
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-react"></i>
+                            <span>React Native</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-rocket"></i>
+                            <span>Expo</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Tools -->
+                <div class="stack-category">
+                    <h3 class="category-title">
+                        <i class="fas fa-tools"></i>
+                        Outils & Workflow
+                    </h3>
+                    <div class="tech-grid">
+                        <div class="tech-item">
+                            <i class="fab fa-git-alt"></i>
+                            <span>Git</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fab fa-github"></i>
+                            <span>GitHub</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 88%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-code"></i>
+                            <span>VS Code</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        <div class="tech-item">
+                            <i class="fas fa-tasks"></i>
+                            <span>Scrum</span>
+                            <div class="skill-bar">
+                                <div class="skill-fill" style="width: 82%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tools-section">
+                <h3>Environnement de développement</h3>
+                <div class="tools-list">
+                    <div class="tool-item">
+                        <i class="fas fa-code"></i>
+                        <span>Visual Studio Code</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-microsoft"></i>
+                        <span>Visual Studio 2022</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-terminal"></i>
+                        <span>JetBrains Rider</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-trello"></i>
+                        <span>Trello</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-jira"></i>
+                        <span>Jira</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fas fa-sitemap"></i>
+                        <span>Notion</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-figma"></i>
+                        <span>Figma</span>
+                    </div>
+                    <div class="tool-item">
+                        <i class="fab fa-npm"></i>
+                        <span>npm / yarn</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-label">// 06. Prenons contact</span>
+                <h2 class="section-title">Contactez-moi</h2>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Discutons de votre projet</h3>
+                    <p>
+                        Je suis actuellement à la recherche d'une <strong>alternance en Master</strong> 
+                        pour 2025. Si vous cherchez un développeur motivé et passionné, 
+                        n'hésitez pas à me contacter !
+                    </p>
+                    
+                    <div class="contact-details">
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <span>Email</span>
+                                <a href="/cdn-cgi/l/email-protection#12677e607b717a76737e797b7c52757f737b7e3c717d7f"><span class="__cf_email__" data-cfemail="2d58415f444e45494c414644436d4a404c4441034e4240">[email&#160;protected]</span></a>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <div>
+                                <span>Téléphone</span>
+                                <a href="tel:0769521961">07 69 52 19 61</a>
+                            </div>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <span>Localisation</span>
+                                <p>Île-de-France, France</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/ulrich-dalkin-fosso-52b505263/" 
+                           target="_blank" class="social-link linkedin">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a href="https://github.com/" target="_blank" class="social-link github">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.instagram.com/ulr_i._.k?igsh=MXIwa2RkZ255MXJtZA%3D%3D&utm_source=qr" 
+                           target="_blank" class="social-link instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Envoyer le message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                </form>
+            </div>
+            
+          <div class="email-direct">
+                <p>Problème avec le formulaire ?</p>
+                <a href="mailto:contact@exemple.com?subject=Problème%20avec%20le%20formulaire&body=Bonjour,%20je%20souhaite%20vous%20contacter%20car..." class="btn btn-outline">
+                <i class="fas fa-envelope"></i>
+                <span>M'envoyer un email directement</span>
+                 </a>
+          </div>
+Explications 
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <span class="logo-bracket">[</span>
+                        <span class="logo-text">UF</span>
+                        <span class="logo-bracket">]</span>
+                    </div>
+                    <p>Ulrich Fosso - Développeur Full-Stack</p>
+                    <p class="footer-tagline">Créer • Innover • Inspirer</p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="footer-column">
+                        <h4>Navigation</h4>
+                        <ul>
+                            <li><a href="#about">À propos</a></li>
+                            <li><a href="#expertise">Expertise</a></li>
+                            <li><a href="#projects">Projets</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div class="footer-column">
+                        <h4>Liens utiles</h4>
+                        <ul>
+                            <li><a href="https://drive.google.com/file/d/1DRxJZqwZ4IoE9C8GyPlS78PH_kG_NpjO/view?usp=sharing" target="_blank">Mon CV</a></li>
+                            <li><a href="https://www.linkedin.com/in/ulrich-dalkin-fosso-52b505263/" target="_blank">LinkedIn</a></li>
+                            <li><a href="https://github.com/" target="_blank">GitHub</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Ulrich
