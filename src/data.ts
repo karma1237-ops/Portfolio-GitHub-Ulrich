@@ -34,14 +34,14 @@ export const PROJECTS: Project[] = [
     name: 'Ma Bibliothèque',
     live: true,
     status: 'En ligne',
-    description: "Application web de suivi de lecture : on ajoute ses livres, on se fixe un objectif et on suit son année de lecture.",
+    description: "SPA de suivi de lecture, projet de Master mis en production : bibliothèque, statuts de lecture, notes, objectif annuel et bilan partageable en image.",
     features: [
-      'Ajout de livres par titre et auteur, ou par scan',
-      'Recherche parmi des millions de livres (Google Books)',
-      'Fiche détaillée de chaque livre avec enregistrement',
-      'Statistiques annuelles de lecture',
+      'React + Redux avec un middleware de synchronisation sur mesure',
+      'Comptes avec confirmation par e-mail, PostgreSQL protégé par RLS (Supabase)',
+      'Sécurité OWASP (CSP, en-têtes HTTP) et conformité RGPD sans cookie',
+      'Déploiement continu GitHub → Vercel, SEO et Open Graph',
     ],
-    tags: ['API Google Books', 'Vercel', 'Responsive'],
+    tags: ['React', 'Redux', 'Supabase', 'API Google Books', 'Vercel'],
     liveUrl: 'https://ma-bibliotheque-en-ligne.vercel.app/',
     codeUrl: 'https://github.com/karma1237-ops',
     tourUrl: 'ma-bibliotheque-en-ligne.vercel.app',
@@ -77,14 +77,14 @@ export const PROJECTS: Project[] = [
     name: 'Athletix',
     live: false,
     status: 'Démo locale',
-    description: "Boutique en ligne d'équipements de fitness et de musculation, livrés en 24 h.",
+    description: "E-commerce d'équipements de fitness avec une architecture applicative complète (mars – juin 2026).",
     features: [
-      'Catégories et sélection de produits vedettes',
-      'Catalogue avec recherche, filtres et tri',
-      'Panier, inscription et connexion',
-      'Interface sombre et typographie sportive',
+      'API Node.js / Express, données MySQL et MongoDB',
+      'Authentification JWT, inscription et connexion',
+      'Catalogue avec recherche, filtres, tri et panier',
+      'Tests Jest + Supertest et intégration continue GitLab CI/CD',
     ],
-    tags: ['Vite', 'JavaScript', 'E-commerce'],
+    tags: ['React', 'Node.js', 'Express', 'MySQL', 'MongoDB', 'JWT', 'Jest'],
     codeUrl: 'https://github.com/karma1237-ops/Athletix',
     tourUrl: 'localhost:5173',
     shots: [
@@ -97,11 +97,11 @@ export const PROJECTS: Project[] = [
 
 export const EXPERTISE: [string, string, string][] = [
   ['FE', 'Frontend', 'Interfaces modernes et réactives en React.js et TypeScript : hooks, Context API, animations et performances.'],
-  ['BE', 'Backend', 'APIs REST sécurisées en C# .NET et Node.js, architecture en couches, principes SOLID, JWT.'],
-  ['MO', 'Mobile', 'Applications cross-platform en React Native et Expo : navigation, état global, APIs natives.'],
-  ['DB', 'Bases de données', 'MySQL, SQL Server, MongoDB et Firebase : modélisation UML, migrations et optimisation.'],
-  ['AG', 'Méthodes agiles', 'Scrum et Kanban au quotidien : sprints, user stories, backlog, revues de code.'],
-  ['GIT', 'DevOps & versionning', 'Git Flow, GitHub, pipelines CI/CD et déploiement cloud.'],
+  ['BE', 'Backend & sécurité', 'APIs REST en Node.js/Express, PHP/Symfony et C# : JWT, Argon2, CSP, protection XSS, RGPD.'],
+  ['IA', 'IA appliquée', 'Déploiement de LLM en local (Ollama, Mistral 7B) avec Docker et interface de chat sécurisée.'],
+  ['DB', 'Data', 'MySQL, PostgreSQL (Supabase), MongoDB et Python ; certifié Microsoft Azure Data Fundamentals (DP-900).'],
+  ['PM', 'Gestion de projet', 'Scrum, UML, Merise, rédaction de spécifications et pilotage de projet (Master Directeur de Projet).'],
+  ['OPS', 'DevOps', 'Docker, GitLab CI/CD, Azure DevOps, déploiement continu sur Vercel.'],
 ];
 
 export const SKILLS: [string, number][] = [

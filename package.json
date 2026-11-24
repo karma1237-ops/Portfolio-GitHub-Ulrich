@@ -6,7 +6,8 @@
   "scripts": {
     "typecheck": "tsc --noEmit",
     "build": "npm run typecheck && esbuild src/main.ts --bundle --minify --format=esm --target=es2020 --outfile=assets/main.js",
-    "dev": "esbuild src/main.ts --bundle --format=esm --target=es2020 --outfile=assets/main.js --servedir=. --watch"
+    "dev": "esbuild src/main.ts --bundle --format=esm --target=es2020 --outfile=assets/main.js --servedir=. --watch",
+    "vercel-build": "npm run build && rm -rf dist && mkdir -p dist/images && cp -r index.html styles.css assets public dist/ && cp images/profil.jpg dist/images/"
   },
   "dependencies": {
     "three": "0.170.0"
