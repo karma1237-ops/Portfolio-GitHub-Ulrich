@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <defs>
+    <linearGradient id="fire" x1="0" y1="1" x2="0" y2="0">
+      <stop offset="0" stop-color="#ff3d2e"/>
+      <stop offset=".55" stop-color="#ff6f59"/>
+      <stop offset="1" stop-color="#ffc857"/>
+    </linearGradient>
+    <linearGradient id="tail" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ff6f59"/>
+      <stop offset="1" stop-color="#ffc857"/>
+    </linearGradient>
+  </defs>
+  <rect width="64" height="64" rx="15" fill="#00463c"/>
+  <!-- aile gauche : plumes en flammes -->
+  <path fill="url(#fire)" d="M30 33C22 31 13 25 7 9c5 6 9 8 13 9-3-4-4-8-3-13 3 7 7 11 11 13-1-4 0-8 2-11 1 7 2 12 3 16z"/>
+  <!-- aile droite -->
+  <path fill="url(#fire)" d="M34 33c8-2 17-8 23-24-5 6-9 8-13 9 3-4 4-8 3-13-3 7-7 11-11 13 1-4 0-8-2-11-1 7-2 12-3 16z"/>
+  <!-- corps -->
+  <path fill="#ffe3a3" d="M32 22c3 0 4 5 3.2 10S33.6 41 32 45c-1.6-4-2.4-8-3.2-13S29 22 32 22z"/>
+  <!-- tête, aigrette et bec -->
+  <path fill="#ffe3a3" d="M32 16.5c2.2 0 3.4 1.6 3.4 3.4 0 2-1.4 3.1-3.4 3.6-2-.5-3.4-1.6-3.4-3.6 0-1.8 1.2-3.4 3.4-3.4z"/>
+  <path fill="#ffc857" d="M30.5 17c-2-3-2-7 0-10 0 3 1 5 4 8 -1-3 0-5 2-6-1 3-1 6 0 8z"/>
+  <path fill="#ffc857" d="M35.2 19.2 39.5 20.6l-4.3 1.1z"/>
+  <circle cx="33.3" cy="19.3" r=".75" fill="#00463c"/>
+  <!-- queue en flammes -->
+  <path fill="url(#tail)" d="M32 44c-1 6-5 10-10 13 5 0 8-2 10-5 2 3 5 5 10 5-5-3-9-7-10-13z"/>
+  <path fill="#ffc857" d="M32 46c1 5 0 9-1 12 2-2 3-5 3-8z"/>
+</svg>

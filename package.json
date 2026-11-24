@@ -1,0 +1,19 @@
+{
+  "name": "portfolio-ulrich-fosso",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Portfolio d'Ulrich Fosso – TypeScript + Three.js",
+  "scripts": {
+    "typecheck": "tsc --noEmit",
+    "build": "npm run typecheck && esbuild src/main.ts --bundle --minify --format=esm --target=es2020 --outfile=assets/main.js",
+    "dev": "esbuild src/main.ts --bundle --format=esm --target=es2020 --outfile=assets/main.js --servedir=. --watch"
+  },
+  "dependencies": {
+    "three": "0.170.0"
+  },
+  "devDependencies": {
+    "@types/three": "0.170.0",
+    "esbuild": "0.24.0",
+    "typescript": "5.6.3"
+  }
+}
